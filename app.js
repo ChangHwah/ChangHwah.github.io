@@ -23,10 +23,16 @@ PageTransitions = () => {
             sections.forEach((section) => {
                 section.classList.remove('active');
             })
-
+            //display newly active section
             const element = document.getElementById(id);
             element.classList.add('active');
         }
+    })
+    //togle theme
+    const themeBtn = document.querySelector('.theme-button');
+    themeBtn.addEventListener('click', () => {
+        let element = document.body;
+        element.classList.toggle('light-mode')
     })
 };
 
