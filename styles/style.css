@@ -96,12 +96,6 @@ section {
           transform: translateY(0) scale(1);
 }
 
-.sec4 {
-  display: none;
-  -webkit-transform: translateY(0) scale(1);
-          transform: translateY(0) scale(1);
-}
-
 .sec5 {
   display: none;
   -webkit-transform: translateY(0) scale(1);
@@ -780,6 +774,10 @@ section {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+}
+
+.contact-content-container .right-contact .submit-button .submit-button-text {
+  padding: .5rem 2rem;
 }
 
 /*independent components*/
