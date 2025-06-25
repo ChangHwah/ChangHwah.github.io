@@ -3,6 +3,7 @@ export default function Home() {
     return (
       <main className="min-h-screen bg-white text-gray-800">
         <header className="bg-green-700 text-white p-6 shadow">
+          <title>Grey Techs</title>
           <div className="max-w-5xl mx-auto flex justify-between items-center">
             <h1 className="text-2xl font-bold">Grey Techs</h1>
             <nav className="space-x-4">
