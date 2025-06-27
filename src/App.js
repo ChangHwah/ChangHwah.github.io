@@ -1,4 +1,8 @@
 import './index.css';
+import techImage from "./assets/tech-working-on-laptop.jpg";
+import itSupport from "./assets/it-support.jpg";
+import networkInstallation from "./assets/network-installation.jpg";
+import webDevelopment from "./assets/web-development.jpg";
 export default function Home() {
     return (
       <main className="min-h-screen bg-white text-gray-800">
@@ -18,7 +22,7 @@ export default function Home() {
           <h2 className="text-4xl font-bold mb-4">Expert IT Consulting for Real-World Results</h2>
           <p className="text-lg max-w-2xl mx-auto">Grey Techs delivers hands-on technical support and custom IT solutions backed by field expertise in low voltage, POS, A/V, VoIP, networking, and cameras.</p>
           <div className="mt-8">
-            <img src="/images/hero-tech-support.jpg" alt="Technician at work" className="mx-auto rounded shadow-lg max-w-xl" />
+            <img src={techImage} alt="Technician at work" className="mx-auto rounded shadow-lg max-w-xl" />
           </div>
         </section>
   
@@ -27,17 +31,17 @@ export default function Home() {
             <h3 className="text-3xl font-semibold mb-8">Our Services</h3>
             <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
               <div className="bg-green-100 p-6 rounded shadow">
-                <img src="/images/field-support.jpg" alt="Field support" className="mb-4 w-full h-40 object-cover rounded" />
+                <img src={itSupport} alt="Field support" className="mb-4 w-full h-40 object-cover rounded" />
                 <h4 className="text-xl font-bold mb-2">Field IT Support</h4>
                 <p>Over a decade of experience in troubleshooting and installing low-voltage systems, POS terminals, VoIP setups, and A/V equipment. Quick, reliable service tailored for small to mid-sized businesses.</p>
               </div>
               <div className="bg-green-100 p-6 rounded shadow">
-                <img src="/images/networking.jpg" alt="Networking setup" className="mb-4 w-full h-40 object-cover rounded" />
+                <img src={networkInstallation} alt="Networking setup" className="mb-4 w-full h-40 object-cover rounded" />
                 <h4 className="text-xl font-bold mb-2">Networking and Infrastructure</h4>
                 <p>Design, setup, and maintenance of wired and wireless networks. Experience with IP camera systems and structured cabling ensures a stable and scalable setup.</p>
               </div>
               <div className="bg-green-100 p-6 rounded shadow">
-                <img src="/images/web-development.jpg" alt="Web development workspace" className="mb-4 w-full h-40 object-cover rounded" />
+                <img src={webDevelopment} alt="Web development workspace" className="mb-4 w-full h-40 object-cover rounded" />
                 <h4 className="text-xl font-bold mb-2">Web Development</h4>
                 <p>Modern, responsive websites and web applications built with JavaScript and React Native. From business landing pages to custom tools, we bring your ideas to life on the web.</p>
               </div>
