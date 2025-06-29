@@ -8,8 +8,8 @@ return (
     {/* Spam trap field */}
     <input type="text" name="_gotcha" style={{display: 'none'}} />
 
-    {/* Redirect to thank-you page after successful submission */}
-    <input type="hidden" name="_redirect" value="https://changhwah.github.io/thank-you.html" />
+    {/* Redirect to Formspree's thank-you page after successful submission */}
+    <input type="hidden" name="_redirect" value="/thank-you.html" />
 
     <div>
         <label className = "block mb-1 font-medium">Name</label>
@@ -43,7 +43,7 @@ return (
 
     <button 
         type="submit"
-        className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+        className="bg-green-700 text-white font-semibold px-6 py-3 rounded-md shadow-md hover:bg-green-600 transition-colors duration-300"
     >
         Send
     </button>
