@@ -1,3 +1,5 @@
+function Contact() {
+return (
 <form
     action = "https://formspree.io/f/mzzgoply"
     method = "POST"
@@ -34,7 +36,7 @@
         <textarea
             name = "message"
             required
-            row = "5"
+            rows = "5"
             className = "w-full border border-gray-300 rounded p-2"
         ></textarea>
     </div>
@@ -46,3 +48,6 @@
         Send
     </button>
 </form>
+)}
+
+export default Contact;

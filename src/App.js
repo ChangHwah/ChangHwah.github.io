@@ -1,4 +1,5 @@
 import './index.css';
+import Contact from './Contact';
 import techImage from "./assets/tech-working-on-laptop.jpg";
 import itSupport from "./assets/it-support.jpg";
 import networkInstallation from "./assets/network-installation.jpg";
@@ -59,12 +60,10 @@ export default function Home() {
         <section id="contact" className="py-16 bg-white">
           <div className="max-w-xl mx-auto">
             <h3 className="text-3xl font-semibold text-center mb-6">Contact Us</h3>
-            <form className="bg-green-50 p-6 rounded shadow space-y-4">
-              <input type="text" placeholder="Name" className="w-full p-2 border border-gray-300 rounded" />
-              <input type="email" placeholder="Email" className="w-full p-2 border border-gray-300 rounded" />
-              <textarea placeholder="Your message" className="w-full p-2 border border-gray-300 rounded" rows="5"></textarea>
-              <button type="submit" className="w-full bg-green-700 text-white py-2 rounded hover:bg-green-800">Send Message</button>
-            </form>
+            <div>
+              {/* Contact Form Component imported from Contact.jsx file */}
+              <Contact />
+            </div>
           </div>
         </section>
   
