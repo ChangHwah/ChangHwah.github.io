@@ -1,17 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.f6e2d6ce.css",
-    "main.js": "/static/js/main.25c0142a.js",
-    "static/media/it-support.jpg": "/static/media/it-support.a053acc220434b9562cb.jpg",
-    "static/media/tech-working-on-laptop.jpg": "/static/media/tech-working-on-laptop.8caea167b2540235b51d.jpg",
-    "static/media/network-installation.jpg": "/static/media/network-installation.931f169afa9eb583553f.jpg",
-    "static/media/web-development.jpg": "/static/media/web-development.f2d96dd189b71f3a9a24.jpg",
+    "main.css": "/static/css/main.7cc0b56e.css",
+    "main.js": "/static/js/main.0e2c0e1a.js",
+    "static/media/networkImg.avif": "/static/media/networkImg.93f74a3497375713773f.avif",
+    "static/media/camImg.avif": "/static/media/camImg.ebe0730cb44ff62af193.avif",
+    "static/media/supportImg.avif": "/static/media/supportImg.5ff34e2aab3c798d8028.avif",
     "index.html": "/index.html",
-    "main.f6e2d6ce.css.map": "/static/css/main.f6e2d6ce.css.map",
-    "main.25c0142a.js.map": "/static/js/main.25c0142a.js.map"
+    "main.7cc0b56e.css.map": "/static/css/main.7cc0b56e.css.map",
+    "main.0e2c0e1a.js.map": "/static/js/main.0e2c0e1a.js.map"
   },
   "entrypoints": [
-    "static/css/main.f6e2d6ce.css",
-    "static/js/main.25c0142a.js"
+    "static/css/main.7cc0b56e.css",
+    "static/js/main.0e2c0e1a.js"
   ]
 }
