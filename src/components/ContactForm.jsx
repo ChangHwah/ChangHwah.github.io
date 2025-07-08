@@ -1,4 +1,4 @@
-function Contact() {
+export default function Contact() {
 return (
 <form
     action = "https://formspree.io/f/mzzgoply"
@@ -48,6 +48,4 @@ return (
         Send
     </button>
 </form>
-)}
-
-export default Contact;
+);};

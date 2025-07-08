@@ -1,8 +1,4 @@
 import React from "react";
-import techImage from "../assets/tech-working-on-laptop.jpg";
-import itSupport from "../assets/it-support.jpg";
-import networkInstallation from "../assets/network-installation.jpg";
-import webDevelopment from "../assets/web-development.jpg";
 
 export default function Services() {
   return (

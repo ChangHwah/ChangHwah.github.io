@@ -16,6 +16,12 @@ export default function Navbar() {
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-6">
             <Link
+              to="/contact"
+              className="hidden md:inline-block bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg transition"
+              >
+              Get a Quote
+            </Link>
+            <Link
               to="/"
               className="hover:underline px-3 py-2 rounded"
               onClick={() => setIsOpen(false)}
