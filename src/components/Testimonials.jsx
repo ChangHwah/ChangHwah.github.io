@@ -14,6 +14,11 @@ export default function Testimonials() {
       comment:
         "Solomon has worked on a number of IT projects with me over the past few years. He is very diligent and responsible. He has an excellent work ethic and people skills. I highly recommend him.",
     },
+    {
+      name: "Auston Thompson",
+      date: "July 8, 2025",
+      comment: "I have had the pleasure of working alongside Solomon on two occasions. During our first collaboration, I did not work with him directly, but I received consistent positive feedback from the owner of the contracting company concerning his performance. In our second engagement, I had the opportunity to work with Solomon directly and was thoroughly impressed by his professionalism, technical expertise, and positive attitude. He is both a skilled technicians and a dependable team member. I would not hesitate to work with him again and highly recommend him for future projects."
+    }
   ];
 
   const clientTestimonials = [

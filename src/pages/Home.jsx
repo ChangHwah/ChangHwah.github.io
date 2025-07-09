@@ -1,4 +1,4 @@
-import ContactForm from "../components/ContactForm";
+// import ContactForm from "../components/ContactForm";
 import { Helmet } from 'react-helmet';
 import { Link } from "react-router-dom";
 import ServicesSection from "../components/ServicesSection";
@@ -6,7 +6,7 @@ import CTASection from "../components/CTASection";
 import WhyChoose from "../components/WhyChoose";
 import Testimonials from "../components/Testimonials";
 import HowItWorks from "../components/howItWorks";
-import ServiceAreas from "../components/serviceArea";
+// import ServiceAreas from "../components/serviceArea";
 import CallButton from "../components/CallButton";
 import MiniContactForm from "../components/MiniContactForm";
 
