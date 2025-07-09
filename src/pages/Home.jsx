@@ -1,4 +1,5 @@
 import ContactForm from "../components/ContactForm";
+import { Helmet } from 'react-helmet';
 import { Link } from "react-router-dom";
 import ServicesSection from "../components/ServicesSection";
 import CTASection from "../components/CTASection";
@@ -11,6 +12,15 @@ import MiniContactForm from "../components/MiniContactForm";
 
 export default function Home() {
   return (
+    <>
+      <Helmet>
+          <title>Grey Techs | Reliable IT Solutions for Small Businesses</title>
+          <meta name="description" content="On-site networking, surveillance, and IT support tailored to your needs in Central and Southern Ohio." />
+          <meta property="og:title" content="Grey Techs IT Services" />
+          <meta property="og:description" content="Expert surveillance camera installation, structured cabling, and IT solutions." />
+          <meta property="og:type" content="website" />
+      </Helmet>
+
      <div className="text-gray-800">
       {/* Hero */}
       <section
@@ -70,6 +80,6 @@ export default function Home() {
       </section>
 
     </div>
-    
+  </>
   );
 }

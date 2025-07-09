@@ -12,8 +12,9 @@ return (
     <input type="hidden" name="_redirect" value="/thank-you.html" />
 
     <div>
-        <label className = "block mb-1 font-medium">Name</label>
+        <label htmlFor="name" className = "block mb-1 font-medium">Name</label>
         <input
+            id = "name"
             type = "text"
             name = "name"
             required
@@ -22,8 +23,9 @@ return (
     </div>
 
     <div>
-        <label className = "block mb-1 font-medium">Email</label>
+        <label htmlFor="email" className = "block mb-1 font-medium">Email</label>
         <input
+            id = "email"
             type = "email"
             name = "email"
             required
@@ -32,8 +34,9 @@ return (
     </div>
 
     <div>
-        <label className = "block mb-1 font-medium">Message</label>
+        <label htmlFor="message" className = "block mb-1 font-medium">Message</label>
         <textarea
+            id = "message"
             name = "message"
             required
             rows = "5"

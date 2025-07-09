@@ -12,6 +12,7 @@ export default function CTASection() {
       </p>
       <Link
         to="/contact"
+        aria-label="Request a free consultation with Grey Techs"
         className="inline-block bg-white text-green-700 font-semibold py-3 px-8 rounded-full shadow hover:bg-gray-100 transition"
       >
         Get Your Free Consultation

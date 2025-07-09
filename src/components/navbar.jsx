@@ -107,6 +107,7 @@ export default function Navbar() {
           </Link>
           <Link
             to="/services"
+            aria-label="Go to Services page"
             className="block px-3 py-2 rounded hover:bg-green-500"
             onClick={() => setIsOpen(false)}
           >
@@ -114,6 +115,7 @@ export default function Navbar() {
           </Link>
           <Link
             to="/about"
+            aria-label="Go to About page"
             className="block px-3 py-2 rounded hover:bg-green-500"
             onClick={() => setIsOpen(false)}
           >
@@ -121,6 +123,7 @@ export default function Navbar() {
           </Link>
           <Link
             to="/contact"
+            aria-labe="Go to Contact page"
             className="block px-3 py-2 rounded hover:bg-green-500"
             onClick={() => setIsOpen(false)}
           >

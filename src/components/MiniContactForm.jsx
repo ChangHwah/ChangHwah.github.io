@@ -40,40 +40,57 @@ export default function MiniContactForm() {
           Thanks for reaching out! We’ll get back to you soon.
         </p>
       ) : (
-        <form onSubmit={handleSubmit} className="space-y-4 text-left">
+        <form 
+          action = "https://formspree.io/f/mzzgoply"
+          method = "POST"
+          className="space-y-4 text-left"
+        >
+
+          {/* Spam trap field */}
+          <input type="text" name="_gotcha" style={{display: 'none'}} />
+
+          {/* Redirect to Formspree's thank-you page after successful submission */}
+          <input type="hidden" name="_redirect" value="/thank-you.html" />
+
+          <label htmlFor="mini-name" className="sr-only">Name</label>
           <input
+            id="name"
             type="text"
             name="name"
             placeholder="Your Name"
             value={formData.name}
             onChange={handleChange}
             required
-            className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-600"
           />
 
+          <label htmlFor="mini-email" className="sr-only">Email</label>
           <input
+            id="email"
             type="email"
             name="email"
             placeholder="Your Email"
             value={formData.email}
             onChange={handleChange}
             required
-            className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-600"
           />
-
+          
+          <label htmlFor="mini-message" className="sr-only">Message</label>
           <textarea
+            id="message"
             name="message"
             placeholder="Your Message"
             value={formData.message}
             onChange={handleChange}
             required
             rows={3}
-            className="w-full border border-gray-300 rounded px-3 py-2 resize-none focus:outline-none focus:ring-2 focus:ring-green-500"
+            className="w-full border border-gray-300 rounded px-3 py-2 resize-none focus:outline-none focus:ring-2 focus:ring-green-600"
           />
 
           <button
             type="submit"
-            className="bg-green-600 text-white font-semibold rounded px-6 py-2 hover:bg-green-700 transition"
+            className="bg-green-700 text-white font-semibold rounded px-6 py-2 hover:bg-green-600 transition"
           >
             Send
           </button>

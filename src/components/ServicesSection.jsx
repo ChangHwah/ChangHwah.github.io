@@ -61,8 +61,9 @@ export default function ServicesSection() {
               variants={fadeUp}
             >
               <img
+                loading="lazy"
                 src={service.img}
-                alt={service.title}
+                alt={`Illustration of ${service.title}`}
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
