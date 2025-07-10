@@ -1,7 +1,10 @@
+// React Components
 import { Helmet } from "react-helmet";
-import HowItWorks from "../components/howItWorks";
 
-// Replace these with your actual image imports
+// Function Components
+import HowItWorks from "../components/HowItWorks";
+
+// Asset Images
 import surveillanceImg from "../assets/camImg.avif";
 import networkingImg from "../assets/networkImg.avif";
 import itSupportImg from "../assets/supportImg.avif";
