@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 // Asset Images
 import camImg from '../assets/camImg.avif';
-import networkImg from '../assets/networkImg.avif';
+import structuredcabling from '../assets/structuredcabling.avif';
 import supportImg from '../assets/supportImg.avif';
 
 const fadeUp = {
@@ -22,7 +22,7 @@ export default function ServicesSection() {
     },
     {
       title: "Network Configuration",
-      img: networkImg,
+      img: structuredcabling,
       desc: "Reliable wired and wireless networks built for performance and future scalability.",
     },
     {
@@ -41,10 +41,6 @@ export default function ServicesSection() {
       <div
         className="absolute inset-0 opacity-10 pointer-events-none"
         aria-hidden="true"
-        style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, #34d399 1px, transparent 1px)`,
-          backgroundSize: "20px 20px",
-        }}
       />
 
       {/* Content */}

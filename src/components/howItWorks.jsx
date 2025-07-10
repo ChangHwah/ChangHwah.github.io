@@ -33,10 +33,6 @@ export default function HowItWorks() {
       <div
           className="absolute inset-0 opacity-10 pointer-events-none"
           aria-hidden="true"
-          style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, #34d399 1px, transparent 1px)`,
-          backgroundSize: "20px 20px",
-          }}
       />
 
       {/* Content */}
