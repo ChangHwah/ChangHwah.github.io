@@ -1,5 +1,6 @@
 // React Components
 import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
 
 // Function Components
 import ServiceCategories from "../components/ServiceCategories.jsx";
@@ -54,12 +55,12 @@ export default function Services() {
       {/* Call to Action */}
       <section className="text-center mb-20">
         <p className="text-xl mb-4">Not sure what fits your needs?</p>
-        <a
-          href="/contact"
+        <Link
+          to="/contact"
           className="inline-block bg-green-700 text-white px-6 py-3 rounded shadow hover:bg-green-800 transition"
         >
           Request a Free Consultation
-        </a>
+        </Link>
       </section>
     </main>
   );

@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Link } from "react-router-dom";
 
 export default function About() {
   useEffect(() => {
@@ -92,8 +93,8 @@ export default function About() {
           </ul>
 
           <div className="mt-12 text-center">
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="inline-flex items-center justify-center gap-2 bg-green-700 text-white px-6 py-3 rounded shadow hover:bg-green-800 focus:outline-none focus:ring-2 focus:ring-green-600 transition"
             >
               Get in Touch
@@ -107,7 +108,7 @@ export default function About() {
               >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
-            </a>
+            </Link>
           </div>
         </div>
       </section>

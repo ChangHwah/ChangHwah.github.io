@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export const PricingOptions = () => {
     return (
         <section className="max-w-4xl mx-auto mb-20 px-6">
@@ -11,12 +13,12 @@ export const PricingOptions = () => {
               <li>Monthly system checkups</li>
               <li>Software updates</li>
             </ul>
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="inline-block bg-green-700 text-white px-4 py-2 rounded hover:bg-green-800 transition"
             >
               Get Started
-            </a>
+            </Link>
           </div>
 
           <div className="border rounded-lg p-6 shadow hover:shadow-lg transition">
@@ -28,12 +30,12 @@ export const PricingOptions = () => {
               <li>Priority support</li>
               <li>Network performance monitoring</li>
             </ul>
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="inline-block bg-green-700 text-white px-4 py-2 rounded hover:bg-green-800 transition"
             >
               Choose Plan
-            </a>
+            </Link>
           </div>
 
           <div className="border rounded-lg p-6 shadow hover:shadow-lg transition">
@@ -45,12 +47,12 @@ export const PricingOptions = () => {
               <li>24/7 emergency support</li>
               <li>Advanced security updates</li>
             </ul>
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="inline-block bg-green-700 text-white px-4 py-2 rounded hover:bg-green-800 transition"
             >
               Contact Us
-            </a>
+            </Link>
           </div>
         </div>
       </section>
