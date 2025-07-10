@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.90e116f5.css",
-    "main.js": "/static/js/main.e56b1e86.js",
+    "main.js": "/static/js/main.97fb5efe.js",
     "static/media/whoweworkwith.avif": "/static/media/whoweworkwith.38be94558b61b22cfaa2.avif",
     "static/media/structuredcabling.avif": "/static/media/structuredcabling.f446cc2eacba7569bafa.avif",
     "static/media/camImg.avif": "/static/media/camImg.ebe0730cb44ff62af193.avif",
@@ -9,10 +9,10 @@
     "static/media/supportImg.avif": "/static/media/supportImg.5ff34e2aab3c798d8028.avif",
     "index.html": "/index.html",
     "main.90e116f5.css.map": "/static/css/main.90e116f5.css.map",
-    "main.e56b1e86.js.map": "/static/js/main.e56b1e86.js.map"
+    "main.97fb5efe.js.map": "/static/js/main.97fb5efe.js.map"
   },
   "entrypoints": [
     "static/css/main.90e116f5.css",
-    "static/js/main.e56b1e86.js"
+    "static/js/main.97fb5efe.js"
   ]
 }
