@@ -3,11 +3,13 @@ import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 
 // Function Components
+import ServicesHero from "../components/ServicesHero.jsx";
 import ServiceCategories from "../components/ServiceCategories.jsx";
 import PricingOptions from "../components/PricingOptions.jsx";
 import WhoWeWorkWith from "../components/WhoWeWorkWith.jsx";
 import HowItWorks from "../components/HowItWorks";
 import WhyChoose from "../components/WhyChoose.jsx";
+import ServicesCTA from "../components/ServicesCTA.jsx";
 
 
 export default function Services() {
@@ -31,12 +33,8 @@ export default function Services() {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="text-center max-w-3xl mx-auto mb-16">
-        <h1 className="text-4xl font-bold mb-4">Professional IT Services for Small Businesses</h1>
-        <p className="text-lg text-gray-600">
-          Tailored on-site solutions for surveillance, networking, structured cabling, and dependable tech support across Southern and Central Ohio.
-        </p>
-      </section>
+      <ServicesHero />
+      
       {/* Service Categories Grid */}
       <ServiceCategories />
       
@@ -53,15 +51,7 @@ export default function Services() {
       <WhyChoose />
 
       {/* Call to Action */}
-      <section className="text-center mb-20">
-        <p className="text-xl mb-4">Not sure what fits your needs?</p>
-        <Link
-          to="/contact"
-          className="inline-block bg-green-700 text-white px-6 py-3 rounded shadow hover:bg-green-800 transition"
-        >
-          Request a Free Consultation
-        </Link>
-      </section>
+      <ServicesCTA />
     </main>
   );
 }

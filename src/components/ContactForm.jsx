@@ -1,5 +1,6 @@
 export default function Contact() {
 return (
+    <section className="mb-12">
 <form
     action = "https://formspree.io/f/mzzgoply"
     method = "POST"
@@ -51,4 +52,5 @@ return (
         Send
     </button>
 </form>
+</section>
 );};
