@@ -1,4 +1,4 @@
-import WhoWeWorkWithImg from "../assets/whoweworkwith.avif";
+import WhoWeWorkWithImg from "../../assets/whoweworkwith.avif";
 
 export const WhoWeWorkWith = () => {
     return (

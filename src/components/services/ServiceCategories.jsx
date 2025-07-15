@@ -1,8 +1,8 @@
 // Asset Images
-import surveillanceImg from "../assets/camImg.avif";
-import structuredcabling from "../assets/structuredcabling.avif";
-import itSupportImg from "../assets/supportImg.avif";
-import maintenanceImg from "../assets/maintenanceImg.avif";
+import surveillanceImg from "../../assets/camImg.avif";
+import structuredcabling from "../../assets/structuredcabling.avif";
+import itSupportImg from "../../assets/supportImg.avif";
+import maintenanceImg from "../../assets/maintenanceImg.avif";
 
 export const ServiceCategories = () => {
   const services = [

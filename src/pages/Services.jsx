@@ -3,13 +3,13 @@ import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 
 // Function Components
-import ServicesHero from "../components/ServicesHero.jsx";
-import ServiceCategories from "../components/ServiceCategories.jsx";
-import PricingOptions from "../components/PricingOptions.jsx";
-import WhoWeWorkWith from "../components/WhoWeWorkWith.jsx";
+import ServicesHero from "../components/services/ServicesHero.jsx";
+import ServiceCategories from "../components/services/ServiceCategories.jsx";
+import PricingOptions from "../components/services/ServicesPricing.jsx";
+import WhoWeWorkWith from "../components/services/WhoWeWorkWith.jsx";
 import HowItWorks from "../components/HowItWorks";
 import WhyChoose from "../components/WhyChoose.jsx";
-import ServicesCTA from "../components/ServicesCTA.jsx";
+import ServicesCTA from "../components/services/ServicesCTA.jsx";
 
 
 export default function Services() {

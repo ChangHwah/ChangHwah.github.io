@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 // Asset Images
-import camImg from '../assets/camImg.avif';
-import structuredcabling from '../assets/structuredcabling.avif';
-import supportImg from '../assets/supportImg.avif';
+import camImg from '../../assets/camImg.avif';
+import structuredcabling from '../../assets/structuredcabling.avif';
+import supportImg from '../../assets/supportImg.avif';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },

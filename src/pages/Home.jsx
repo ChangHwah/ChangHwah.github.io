@@ -2,14 +2,14 @@
 import { Helmet } from 'react-helmet';
 
 // Section Components
-import HomeHeroSection from "../components/HomeHeroSection";
-import ServicesSection from "../components/ServicesSection";
+import HomeHeroSection from "../components/home/HomeHeroSection";
+import ServicesSection from "../components/home/ServicesSection";
 import WhyChoose from "../components/WhyChoose";
-import Testimonials from "../components/Testimonials";
+import Testimonials from "../components/home/Testimonials";
 import HowItWorks from "../components/HowItWorks";
-import CTASection from "../components/CTASection";
-import MiniContactForm from "../components/MiniContactForm";
-import HomeParagraph from '../components/HomeParagraphComp';
+import CTASection from "../components/home/CTASection";
+import MiniContactForm from "../components/home/MiniContactForm";
+import HomeParagraph from '../components/home/HomeFooter';
 
 export default function Home() {
   return (

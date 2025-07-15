@@ -11,9 +11,9 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 
 // Function components
-import Navbar from './components/Navbar';
-import FooterComp from './components/FooterComp';
-import CallButton from "./components/CallButton";
+import Navbar from './components/common/Navbar';
+import FooterComp from './components/common/Footer';
+import CallButton from "./components/common/CallButton";
 
 
 export default function App() {
