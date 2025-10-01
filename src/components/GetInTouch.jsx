@@ -17,7 +17,7 @@ export const GetInTouch = () => {
                   href="mailto:zitiswager@gmail.com"
                   className="text-green-700 hover:underline"
                 >
-                  zitiswager@gmail.com
+                  sales@greytechs.net
                 </a>
               </p>
               <p className="mb-2">
