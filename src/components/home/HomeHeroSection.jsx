@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const HomeHeroSection = () => {
     return (
         <section
-            className="relative h-[500px] flex items-center justify-center text-center text-white"
+            className="relative flex items-center justify-center text-center text-white min-h-[500px] sm:min-h-[600px] px-6 py-20"
             style={{
                 backgroundImage:
                     "url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1470&q=80')",
@@ -15,11 +15,11 @@ const HomeHeroSection = () => {
             <div className="absolute inset-0 bg-black opacity-60"></div>
 
             {/* Content */}
-            <div className="relative px-6 max-w-3xl">
-                <h1 className="text-5xl font-extrabold mb-4">
+            <div className="relative max-w-3xl">
+                <h1 className="text-4xl sm:text-5xl font-extrabold mb-4">
                     Surveillance, networks, and IT support — done right, right here.
                 </h1>
-                <p className="text-lg mb-8 text-gray-200">
+                <p className="text-lg sm:text-xl mb-8 text-gray-200">
                     Helping Central & Southern Ohio businesses stay connected, secure, 
                     and supported with simple, reliable tech solutions.
                 </p>
