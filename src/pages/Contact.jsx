@@ -22,18 +22,24 @@ export default function Contact() {
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
 
-      <section className="max-w-xl mx-auto">
+      <section className="max-w-6xl mx-auto">
         <h1 className="text-4xl font-bold mb-8 text-center">Contact Grey Techs</h1>
-
-        <p className="mb-6 text-lg text-center">
+        <p className="mb-12 text-lg text-center">
           Have questions or need a custom quote? Reach out anytime — we’re here to help.
         </p>
 
-        {/* Contact Form Component */}
-        <ContactForm />
+        {/* Grid for Form + Contact Info */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+          {/* Contact Form */}
+          <div className="h-full">
+            <ContactForm />
+          </div>
 
-        {/* Get In Touch Component */}
-        <GetInTouch />
+          {/* Get In Touch */}
+          <div className="h-full">
+            <GetInTouch />
+          </div>
+        </div>
       </section>
     </main>
   );
