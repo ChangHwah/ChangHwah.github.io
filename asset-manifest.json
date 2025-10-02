@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.9456f42a.css",
-    "main.js": "/static/js/main.cc50e133.js",
+    "main.css": "/static/css/main.760a1ef8.css",
+    "main.js": "/static/js/main.6e9e7ba3.js",
     "static/media/GT.png": "/static/media/GT.0602c140ed06ca6451a8.png",
     "static/media/voipphone.avif": "/static/media/voipphone.35efef876e2b65877840.avif",
     "static/media/whoweworkwith.avif": "/static/media/whoweworkwith.38be94558b61b22cfaa2.avif",
@@ -10,11 +10,11 @@
     "static/media/maintenanceImg.avif": "/static/media/maintenanceImg.5ea6e78297bbd7f7cbeb.avif",
     "static/media/supportImg.avif": "/static/media/supportImg.5ff34e2aab3c798d8028.avif",
     "index.html": "/index.html",
-    "main.9456f42a.css.map": "/static/css/main.9456f42a.css.map",
-    "main.cc50e133.js.map": "/static/js/main.cc50e133.js.map"
+    "main.760a1ef8.css.map": "/static/css/main.760a1ef8.css.map",
+    "main.6e9e7ba3.js.map": "/static/js/main.6e9e7ba3.js.map"
   },
   "entrypoints": [
-    "static/css/main.9456f42a.css",
-    "static/js/main.cc50e133.js"
+    "static/css/main.760a1ef8.css",
+    "static/js/main.6e9e7ba3.js"
   ]
 }
