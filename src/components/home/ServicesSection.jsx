@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 // Asset Images
 import camImg from '../../assets/camImg.avif';
+import voipphone from '../../assets/voipphone.avif';
 import structuredcabling from '../../assets/structuredcabling.avif';
 import supportImg from '../../assets/supportImg.avif';
 
@@ -16,19 +17,28 @@ const fadeUp = {
 export default function ServicesSection() {
   const services = [
     {
-      title: "Surveillance Installation",
+      title: "Surveillance Camera Installation",
       img: camImg,
-      desc: "Custom camera setups with professional placement, wiring, and remote viewing support.",
+      desc: "Professional CCTV installs with proper placement, clean wiring, and secure remote access for peace of mind.",
+      alt: "Surveillance camera installation with clean wiring and mounted on office walls",
     },
     {
-      title: "Network Configuration",
+      title: "VoIP Phone Systems",
+      img: voipphone,
+      desc: "Modern business phone setups with site surveys, reliable call quality, and ongoing support built in.",
+      alt: "Modern VoIP phone system installed on office desk with headset",
+    },
+    {
+      title: "Networking & Structured Cabling",
       img: structuredcabling,
-      desc: "Reliable wired and wireless networks built for performance and future scalability.",
+      desc: "Future-proof wired and wireless networks with organized cabling, smart configurations, and consistent performance.",
+      alt: "Structured cabling in server room with organized network cables",
     },
     {
-      title: "IT Support Services",
+      title: "On-Demand IT Support",
       img: supportImg,
-      desc: "Hands-on tech support, troubleshooting, and small business system configuration.",
+      desc: "Fast troubleshooting, system configuration, and ongoing tech help tailored for small business needs.",
+      alt: "IT technician troubleshooting office computer setup",
     },
   ];
 
@@ -37,16 +47,10 @@ export default function ServicesSection() {
       data-aos="fade-up"
       className="relative py-16 px-4 bg-white text-center overflow-hidden"
     >
-      {/* Dotted pattern background */}
-      <div
-        className="absolute inset-0 opacity-10 pointer-events-none"
-        aria-hidden="true"
-      />
-
-      {/* Content */}
-      <div className="relative z-10 max-w-5xl mx-auto">
+      <div className="absolute inset-0 opacity-10 pointer-events-none" aria-hidden="true" />
+      <div className="relative z-10 max-w-7xl mx-auto">
         <h2 className="text-3xl font-bold mb-10">Our Core Services</h2>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8">
           {services.map((service, i) => (
             <motion.div
               key={i}
@@ -60,7 +64,7 @@ export default function ServicesSection() {
               <img
                 loading="lazy"
                 src={service.img}
-                alt={`Illustration of ${service.title}`}
+                alt={service.alt}
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">

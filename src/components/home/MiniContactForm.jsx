@@ -20,7 +20,6 @@ export default function MiniContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
     setSubmitted(true);
     setFormData({ name: "", email: "", message: "" });
   };
@@ -33,26 +32,23 @@ export default function MiniContactForm() {
       variants={fadeUp}
       className="bg-white py-10 px-6 max-w-4xl mx-auto rounded-lg shadow-md mt-16 mb-16"
     >
-      <h3 className="text-xl font-semibold mb-4 text-center">Contact Grey Techs</h3>
+      <h3 className="text-xl font-semibold mb-4 text-center">
+        Get in Touch with Grey Techs
+      </h3>
 
       {submitted ? (
         <p className="text-green-600 font-medium text-center">
-          Thanks for reaching out! We’ll get back to you soon.
+          Thanks for reaching out! We'll contact you shortly.
         </p>
       ) : (
         <form 
-          action = "https://formspree.io/f/mzzgoply"
-          method = "POST"
+          action="https://formspree.io/f/mzzgoply"
+          method="POST"
           className="space-y-4 text-left"
         >
-
-          {/* Spam trap field */}
-          <input type="text" name="_gotcha" style={{display: 'none'}} />
-
-          {/* Redirect to Formspree's thank-you page after successful submission */}
+          <input type="text" name="_gotcha" style={{ display: 'none' }} />
           <input type="hidden" name="_redirect" value="/thank-you.html" />
 
-          <label htmlFor="mini-name" className="sr-only">Name</label>
           <input
             id="name"
             type="text"
@@ -64,7 +60,6 @@ export default function MiniContactForm() {
             className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-600"
           />
 
-          <label htmlFor="mini-email" className="sr-only">Email</label>
           <input
             id="email"
             type="email"
@@ -75,8 +70,7 @@ export default function MiniContactForm() {
             required
             className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-600"
           />
-          
-          <label htmlFor="mini-message" className="sr-only">Message</label>
+
           <textarea
             id="message"
             name="message"
@@ -92,7 +86,7 @@ export default function MiniContactForm() {
             type="submit"
             className="bg-green-700 text-white font-semibold rounded px-6 py-2 hover:bg-green-600 transition"
           >
-            Send
+            Send Message
           </button>
         </form>
       )}
