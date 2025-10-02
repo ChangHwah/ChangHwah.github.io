@@ -1,18 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.34c9a364.css",
-    "main.js": "/static/js/main.75adeb6d.js",
+    "main.css": "/static/css/main.2fee9bd2.css",
+    "main.js": "/static/js/main.6382224e.js",
+    "static/media/GT.png": "/static/media/GT.0602c140ed06ca6451a8.png",
+    "static/media/voipphone.avif": "/static/media/voipphone.35efef876e2b65877840.avif",
     "static/media/whoweworkwith.avif": "/static/media/whoweworkwith.38be94558b61b22cfaa2.avif",
     "static/media/structuredcabling.avif": "/static/media/structuredcabling.f446cc2eacba7569bafa.avif",
     "static/media/camImg.avif": "/static/media/camImg.ebe0730cb44ff62af193.avif",
     "static/media/maintenanceImg.avif": "/static/media/maintenanceImg.5ea6e78297bbd7f7cbeb.avif",
     "static/media/supportImg.avif": "/static/media/supportImg.5ff34e2aab3c798d8028.avif",
     "index.html": "/index.html",
-    "main.34c9a364.css.map": "/static/css/main.34c9a364.css.map",
-    "main.75adeb6d.js.map": "/static/js/main.75adeb6d.js.map"
+    "main.2fee9bd2.css.map": "/static/css/main.2fee9bd2.css.map",
+    "main.6382224e.js.map": "/static/js/main.6382224e.js.map"
   },
   "entrypoints": [
-    "static/css/main.34c9a364.css",
-    "static/js/main.75adeb6d.js"
+    "static/css/main.2fee9bd2.css",
+    "static/js/main.6382224e.js"
   ]
 }
