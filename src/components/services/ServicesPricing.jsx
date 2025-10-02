@@ -1,66 +1,70 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const plans = [
-  {
-    name: "Starter",
-    price: "$500/mo",
-    bestFor: "Small setups under 3 devices",
-  },
-  {
-    name: "Device-Based",
-    price: "$75/device",
-    bestFor: "Scaling beyond 3 devices affordably",
-  },
-  {
-    name: "Basic",
-    price: "$750/mo",
-    bestFor: "Guaranteed on-site hours without extra charges",
-  },
-  {
-    name: "Pro",
-    price: "$1,050/mo",
-    bestFor: "Priority response for growing businesses",
-  },
-  {
-    name: "Premium",
-    price: "$1,250/mo",
-    bestFor: "VIP support and discounted installs",
-  },
-];
-
 export const PricingOptions = () => {
   const [showTable, setShowTable] = useState(false);
 
-  return (
-    <section className="max-w-6xl mx-auto mb-20 px-4">
-      <h2 className="text-3xl font-bold mb-8 text-center">Our Plans</h2>
+  const plans = [
+    {
+      name: "Starter",
+      price: "$500/mo",
+      bestFor: "Small setups, 1–3 devices",
+    },
+    {
+      name: "Device-Based",
+      price: "$75/device/mo",
+      bestFor: "Scaling small businesses beyond 3 devices",
+    },
+    {
+      name: "Basic",
+      price: "$750/mo",
+      bestFor: "Businesses needing guaranteed on-site support",
+    },
+    {
+      name: "Pro",
+      price: "$1,050/mo",
+      bestFor: "Businesses requiring priority response",
+    },
+    {
+      name: "Premium",
+      price: "$1,250/mo",
+      bestFor: "VIP support with same-day response",
+    },
+  ];
 
-      {/* Plan Cards */}
-      <div className="grid gap-8 md:grid-cols-3 mb-8">
-        {plans.map((plan, idx) => (
-          <div
-            key={idx}
-            className="border rounded-lg p-6 shadow hover:shadow-lg transition text-center"
-          >
-            <h3 className="text-xl font-semibold mb-2 text-green-700">{plan.name}</h3>
-            <p className="text-4xl font-bold mb-2">{plan.price}</p>
-            <p className="text-gray-600 mb-4">Best for: {plan.bestFor}</p>
-            <Link
-              to="/contact"
-              className="inline-block bg-green-700 text-white px-4 py-2 rounded hover:bg-green-800 transition"
-            >
-              Choose Plan
-            </Link>
-          </div>
-        ))}
+  const renderCard = (plan) => (
+    <div className="border rounded-lg p-6 shadow hover:shadow-lg transition flex flex-col h-full w-full max-w-sm">
+      <h3 className="text-xl font-semibold mb-2 text-green-700">{plan.name}</h3>
+      <p className="text-3xl font-bold mb-4">{plan.price}</p>
+      <p className="text-gray-600 mb-4"><strong>Best For:</strong> {plan.bestFor}</p>
+      <Link
+        to="/contact"
+        className="mt-auto bg-green-700 text-white px-6 py-2 rounded hover:bg-green-800 transition self-start"
+      >
+        Get Started
+      </Link>
+    </div>
+  );
+
+  return (
+    <section className="max-w-6xl mx-auto mb-20 px-6">
+      <h2 className="text-3xl font-bold mb-8 text-center">Our Pricing Plans</h2>
+
+      {/* Top row: 3 cards */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 justify-items-center">
+        {plans.slice(0, 3).map((plan) => renderCard(plan))}
       </div>
 
-      {/* Toggle Comparison Table */}
-      <div className="text-center mb-6">
+      {/* Bottom row: 2 cards centered */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 justify-items-center">
+        {plans.slice(3).map((plan) => renderCard(plan))}
+      </div>
+
+      {/* Toggle Full Comparison Table */}
+      <div className="flex justify-center mb-6">
         <button
           onClick={() => setShowTable(!showTable)}
-          className="bg-gray-200 px-4 py-2 rounded hover:bg-gray-300 transition"
+          className="bg-gray-200 text-gray-800 px-4 py-2 rounded hover:bg-gray-300 transition"
         >
           {showTable ? "Hide Full Comparison" : "Compare All Plans"}
         </button>
@@ -68,103 +72,93 @@ export const PricingOptions = () => {
 
       {showTable && (
         <div className="overflow-x-auto">
-          <table className="min-w-full border border-gray-200">
+          <table className="min-w-full border border-gray-300 text-left text-sm">
             <thead className="bg-gray-100">
               <tr>
-                <th className="text-left p-3 border-b">Features</th>
-                {plans.map((plan, idx) => (
-                  <th key={idx} className="p-3 border-b">{plan.name}</th>
+                <th className="border px-4 py-2">Features</th>
+                {plans.map((plan, i) => (
+                  <th key={i} className="border px-4 py-2">{plan.name}</th>
                 ))}
               </tr>
             </thead>
-            <tbody className="text-sm">
-              <tr className="bg-white">
-                <td className="p-3 border-b font-semibold">Monthly Cost</td>
-                <td className="p-3 border-b">$500</td>
-                <td className="p-3 border-b">$65–75/device</td>
-                <td className="p-3 border-b">$750</td>
-                <td className="p-3 border-b">$1,050</td>
-                <td className="p-3 border-b">$1,250</td>
+            <tbody>
+              <tr>
+                <td className="border px-4 py-2">Monthly Cost</td>
+                {plans.map((plan, i) => (
+                  <td key={i} className="border px-4 py-2">{plan.price}</td>
+                ))}
               </tr>
-              <tr className="bg-gray-50">
-                <td className="p-3 border-b font-semibold">On-site Hours Included</td>
-                <td className="p-3 border-b">1 hr</td>
-                <td className="p-3 border-b">N/A</td>
-                <td className="p-3 border-b">1 hr</td>
-                <td className="p-3 border-b">2 hr</td>
-                <td className="p-3 border-b">4 hr</td>
+              <tr>
+                <td className="border px-4 py-2">On-site Hours Included</td>
+                <td className="border px-4 py-2">1 hr</td>
+                <td className="border px-4 py-2">N/A</td>
+                <td className="border px-4 py-2">1 hr</td>
+                <td className="border px-4 py-2">2 hrs</td>
+                <td className="border px-4 py-2">4 hrs</td>
               </tr>
-              <tr className="bg-white">
-                <td className="p-3 border-b font-semibold">Remote Support</td>
-                <td className="p-3 border-b">Included</td>
-                <td className="p-3 border-b">$75/hr</td>
-                <td className="p-3 border-b">Included</td>
-                <td className="p-3 border-b">Included</td>
-                <td className="p-3 border-b">Included</td>
+              <tr>
+                <td className="border px-4 py-2">Remote Support</td>
+                <td className="border px-4 py-2">Included</td>
+                <td className="border px-4 py-2">$75/hr</td>
+                <td className="border px-4 py-2">Included</td>
+                <td className="border px-4 py-2">Included</td>
+                <td className="border px-4 py-2">Included</td>
               </tr>
-              <tr className="bg-gray-50">
-                <td className="p-3 border-b font-semibold">Priority Scheduling</td>
-                <td className="p-3 border-b">No</td>
-                <td className="p-3 border-b">No</td>
-                <td className="p-3 border-b">No</td>
-                <td className="p-3 border-b">Yes</td>
-                <td className="p-3 border-b">Yes</td>
+              <tr>
+                <td className="border px-4 py-2">Priority Scheduling</td>
+                <td className="border px-4 py-2">No</td>
+                <td className="border px-4 py-2">No</td>
+                <td className="border px-4 py-2">No</td>
+                <td className="border px-4 py-2">Yes</td>
+                <td className="border px-4 py-2">Yes</td>
               </tr>
-              <tr className="bg-white">
-                <td className="p-3 border-b font-semibold">Emergency On-site Rate</td>
-                <td className="p-3 border-b">$125/hr</td>
-                <td className="p-3 border-b">$125/hr</td>
-                <td className="p-3 border-b">$75/hr</td>
-                <td className="p-3 border-b">$75/hr</td>
-                <td className="p-3 border-b">$75/hr</td>
+              <tr>
+                <td className="border px-4 py-2">Emergency On-site Rate</td>
+                <td className="border px-4 py-2">$125/hr</td>
+                <td className="border px-4 py-2">$125/hr</td>
+                <td className="border px-4 py-2">$75/hr</td>
+                <td className="border px-4 py-2">$75/hr</td>
+                <td className="border px-4 py-2">$75/hr</td>
               </tr>
-              <tr className="bg-gray-50">
-                <td className="p-3 border-b font-semibold">On-site Rate</td>
-                <td className="p-3 border-b">$75/hr</td>
-                <td className="p-3 border-b">$95/hr</td>
-                <td className="p-3 border-b">$45/hr</td>
-                <td className="p-3 border-b">$45/hr</td>
-                <td className="p-3 border-b">$45/hr</td>
+              <tr>
+                <td className="border px-4 py-2">On-site Rate</td>
+                <td className="border px-4 py-2">$75/hr</td>
+                <td className="border px-4 py-2">$95/hr</td>
+                <td className="border px-4 py-2">$45/hr</td>
+                <td className="border px-4 py-2">$45/hr</td>
+                <td className="border px-4 py-2">$45/hr</td>
               </tr>
-              <tr className="bg-white">
-                <td className="p-3 border-b font-semibold">Device Monitoring</td>
-                <td className="p-3 border-b">Included</td>
-                <td className="p-3 border-b">Included</td>
-                <td className="p-3 border-b">Included</td>
-                <td className="p-3 border-b">Included</td>
-                <td className="p-3 border-b">Included</td>
+              <tr>
+                <td className="border px-4 py-2">Device Monitoring</td>
+                {plans.map((plan, i) => (
+                  <td key={i} className="border px-4 py-2">Included</td>
+                ))}
               </tr>
-              <tr className="bg-gray-50">
-                <td className="p-3 border-b font-semibold">New Device Setup / Break-Fix Discounts</td>
-                <td className="p-3 border-b">No</td>
-                <td className="p-3 border-b">No</td>
-                <td className="p-3 border-b">No</td>
-                <td className="p-3 border-b">No</td>
-                <td className="p-3 border-b">Yes</td>
+              <tr>
+                <td className="border px-4 py-2">New Device Setup / Break-Fix Discounts</td>
+                <td className="border px-4 py-2">No</td>
+                <td className="border px-4 py-2">No</td>
+                <td className="border px-4 py-2">No</td>
+                <td className="border px-4 py-2">No</td>
+                <td className="border px-4 py-2">Yes</td>
               </tr>
-              <tr className="bg-white">
-                <td className="p-3 border-b font-semibold">Backup & Disaster Recovery</td>
-                <td className="p-3 border-b">Optional</td>
-                <td className="p-3 border-b">Optional</td>
-                <td className="p-3 border-b">Optional</td>
-                <td className="p-3 border-b">Optional</td>
-                <td className="p-3 border-b">Optional</td>
+              <tr>
+                <td className="border px-4 py-2">Backup & Disaster Recovery</td>
+                {plans.map((plan, i) => (
+                  <td key={i} className="border px-4 py-2">Optional</td>
+                ))}
               </tr>
-              <tr className="bg-gray-50">
-                <td className="p-3 border-b font-semibold">Managed Antivirus & Security</td>
-                <td className="p-3 border-b">Optional</td>
-                <td className="p-3 border-b">Optional</td>
-                <td className="p-3 border-b">Optional</td>
-                <td className="p-3 border-b">Optional</td>
-                <td className="p-3 border-b">Optional</td>
+              <tr>
+                <td className="border px-4 py-2">Managed Antivirus & Security</td>
+                {plans.map((plan, i) => (
+                  <td key={i} className="border px-4 py-2">Optional</td>
+                ))}
               </tr>
-              <tr className="bg-white">
-                <td className="p-3 border-b font-semibold">Camera / Surveillance Monitoring</td>
-                <td className="p-3 border-b">Custom Quote</td>
-                <td className="p-3 border-b">Custom Quote</td>
-                <td className="p-3 border-b">Custom Quote</td>
-                <td className="p-3 border-b">Custom Quote</td>
-                <td className="p-3 border-b">Custom Quote</td>
+              <tr>
+                <td className="border px-4 py-2">Camera / Surveillance Monitoring</td>
+                {plans.map((plan, i) => (
+                  <td key={i} className="border px-4 py-2">Custom Quote</td>
+                ))}
               </tr>
             </tbody>
           </table>
