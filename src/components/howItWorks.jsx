@@ -42,7 +42,7 @@ export default function HowItWorks() {
           {steps.map(({ icon, title, desc }, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition transform hover:scale-105 duration-300"
+              className="bg-gray-50 rounded-xl shadow-md p-6 hover:shadow-lg transition transform hover:scale-105 duration-300"
             >
               {icon}
               <h3 className="font-semibold text-xl mb-2">{title}</h3>

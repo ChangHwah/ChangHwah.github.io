@@ -1,43 +1,55 @@
 // Asset Images
-import surveillanceImg from "../../assets/camImg.avif";
 import structuredcabling from "../../assets/structuredcabling.avif";
 import itSupportImg from "../../assets/supportImg.avif";
+import voipImg from "../../assets/voipphone.avif";
+import surveillanceImg from "../../assets/camImg.avif";
 import maintenanceImg from "../../assets/maintenanceImg.avif";
 
 export const ServiceCategories = () => {
+  // Core services reordered
   const services = [
-    {
-      img: surveillanceImg,
-      alt: "Surveillance camera installation",
-      title: "Surveillance Camera Installation",
-      desc:
-        "We install high-definition security camera systems designed around your layout and visibility needs. Every setup includes strategic placement, clean cable routing, and mobile-friendly remote access. Whether you're securing an office, warehouse, or storefront, we focus on reliability, retention, and clarity.",
-    },
     {
       img: structuredcabling,
       alt: "Networking and structured cabling",
       title: "Networking & Structured Cabling",
       desc:
-        "Clean, organized, and future-ready. We build wired and wireless networks that support your operations — from cable pulls and patch panels to switch configuration and access point placement. We also clean up disorganized network closets and help extend coverage to rural or large properties.",
+        "Future-proof wired and wireless networks with organized cabling and smart configurations. Covered by our MSP plans for proactive upkeep and troubleshooting.",
     },
     {
       img: itSupportImg,
       alt: "On-demand IT support",
       title: "On-Demand IT Support",
       desc:
-        "Have a tech issue that just can’t wait? We offer fast-response on-site IT support for small businesses — covering printers, software installs, email setup, data recovery, and more. Ideal for teams who need local help without a full-time IT staff.",
+        "Fast troubleshooting, system configuration, and ongoing tech help tailored for small businesses. Available under our managed services for consistent support.",
     },
     {
-      img: maintenanceImg,
-      alt: "Flat-rate maintenance plans",
-      title: "Flat-Rate Maintenance Plans",
+      img: voipImg,
+      alt: "VoIP phone system installation",
+      title: "VoIP Phone Systems",
       desc:
-        "Stay covered with a predictable support plan. Our monthly or quarterly maintenance plans include system checks, updates, basic troubleshooting, remote support, and scheduled on-site visits — perfect for avoiding downtime and keeping systems secure over time.",
+        "Modern business phone setups with site surveys, reliable call quality, and ongoing support. Integrated into our maintenance plans for hassle-free operations.",
+    },
+    {
+      img: surveillanceImg,
+      alt: "Surveillance camera installation",
+      title: "Surveillance Camera Installation",
+      desc:
+        "Professional CCTV installs with clean wiring, optimal placement, and secure remote access. Optional add-on that can be included in our proactive maintenance plans.",
     },
   ];
 
+  // MSP advantage / maintenance plan
+  const mspPlan = {
+    img: maintenanceImg,
+    alt: "Flat-rate maintenance plans",
+    title: "Proactive Maintenance Plans",
+    desc:
+      "Wrap all your core services under a monthly or quarterly plan that includes system checks, updates, monitoring, and on-site visits. Minimize downtime and keep your business running smoothly — Grey Techs acts as your proactive MSP partner.",
+  };
+
   return (
     <section className="space-y-16 max-w-6xl mx-auto mb-20 px-4">
+      {/* Core services */}
       {services.map((service, index) => (
         <div
           key={index}
@@ -54,15 +66,29 @@ export const ServiceCategories = () => {
             className="w-full md:w-1/2 h-64 object-cover rounded-xl shadow"
           />
           <div className="md:w-1/2">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">
-              {service.title}
-            </h2>
-            <p className="text-gray-600 text-base leading-relaxed">
-              {service.desc}
-            </p>
+            <h2 className="text-2xl font-bold text-gray-800 mb-4">{service.title}</h2>
+            <p className="text-gray-600 text-base leading-relaxed">{service.desc}</p>
           </div>
         </div>
       ))}
+
+      {/* MSP Advantage / Maintenance Plan */}
+      <div
+        className="flex flex-col md:flex-row items-center gap-8"
+        data-aos="fade-up"
+        data-aos-delay={100}
+        data-aos-duration="600"
+      >
+        <img
+          src={mspPlan.img}
+          alt={mspPlan.alt}
+          className="w-full md:w-1/2 h-64 object-cover rounded-xl shadow"
+        />
+        <div className="md:w-1/2">
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">{mspPlan.title}</h2>
+          <p className="text-gray-600 text-base leading-relaxed">{mspPlan.desc}</p>
+        </div>
+      </div>
     </section>
   );
 };
