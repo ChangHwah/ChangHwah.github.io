@@ -98,11 +98,11 @@ export const PricingOptions = () => {
               </tr>
               <tr>
                 <td className="border px-4 py-2">Remote Support</td>
-                <td className="border px-4 py-2">Included</td>
-                <td className="border px-4 py-2">$75/hr</td>
-                <td className="border px-4 py-2">Included</td>
-                <td className="border px-4 py-2">Included</td>
-                <td className="border px-4 py-2">Included</td>
+                <td className="border px-4 py-2">$75/h</td>
+                <td className="border px-4 py-2">$75/h</td>
+                <td className="border px-4 py-2">$75/h</td>
+                <td className="border px-4 py-2">$75/h</td>
+                <td className="border px-4 py-2">$75/h</td>
               </tr>
               <tr>
                 <td className="border px-4 py-2">Priority Scheduling</td>
@@ -116,17 +116,17 @@ export const PricingOptions = () => {
                 <td className="border px-4 py-2">Emergency On-site Rate</td>
                 <td className="border px-4 py-2">$125/hr</td>
                 <td className="border px-4 py-2">$125/hr</td>
-                <td className="border px-4 py-2">$75/hr</td>
-                <td className="border px-4 py-2">$75/hr</td>
-                <td className="border px-4 py-2">$75/hr</td>
+                <td className="border px-4 py-2">$125/hr</td>
+                <td className="border px-4 py-2">$125/hr</td>
+                <td className="border px-4 py-2">$125/hr</td>
               </tr>
               <tr>
                 <td className="border px-4 py-2">On-site Rate</td>
-                <td className="border px-4 py-2">$75/hr</td>
                 <td className="border px-4 py-2">$95/hr</td>
-                <td className="border px-4 py-2">$45/hr</td>
-                <td className="border px-4 py-2">$45/hr</td>
-                <td className="border px-4 py-2">$45/hr</td>
+                <td className="border px-4 py-2">$95/hr</td>
+                <td className="border px-4 py-2">$95/hr</td>
+                <td className="border px-4 py-2">$95/hr</td>
+                <td className="border px-4 py-2">$95/hr</td>
               </tr>
               <tr>
                 <td className="border px-4 py-2">Device Monitoring</td>
