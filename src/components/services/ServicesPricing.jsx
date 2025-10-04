@@ -11,11 +11,6 @@ export const PricingOptions = () => {
       bestFor: "Small setups, 1–3 devices",
     },
     {
-      name: "Device-Based",
-      price: "$75/device/mo",
-      bestFor: "Scaling small businesses beyond 3 devices",
-    },
-    {
       name: "Basic",
       price: "$750/mo",
       bestFor: "Businesses needing guaranteed on-site support",
@@ -50,16 +45,10 @@ export const PricingOptions = () => {
     <section className="max-w-6xl mx-auto mb-20 px-6">
       <h2 className="text-3xl font-bold mb-8 text-center">Our Pricing Plans</h2>
 
-      {/* Top row: 3 cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 justify-items-center">
-        {plans.slice(0, 3).map((plan) => renderCard(plan))}
+      {/* Single row: 4 cards */}
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 justify-items-center">
+        {plans.map((plan) => renderCard(plan))}
       </div>
-
-      {/* Bottom row: 2 cards centered */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8 justify-items-center">
-        {plans.slice(3).map((plan) => renderCard(plan))}
-      </div>
-
       {/* Toggle Full Comparison Table */}
       <div className="flex justify-center mb-6">
         <button
@@ -90,48 +79,40 @@ export const PricingOptions = () => {
               </tr>
               <tr>
                 <td className="border px-4 py-2">On-site Hours Included</td>
-                <td className="border px-4 py-2">1 hr</td>
                 <td className="border px-4 py-2">N/A</td>
-                <td className="border px-4 py-2">1 hr</td>
-                <td className="border px-4 py-2">2 hrs</td>
-                <td className="border px-4 py-2">4 hrs</td>
+                <td className="border px-4 py-2">1 hour</td>
+                <td className="border px-4 py-2">2 hours</td>
+                <td className="border px-4 py-2">3 hours</td>
               </tr>
               <tr>
                 <td className="border px-4 py-2">Remote Support</td>
-                <td className="border px-4 py-2">$75/h</td>
-                <td className="border px-4 py-2">$75/h</td>
-                <td className="border px-4 py-2">$75/h</td>
-                <td className="border px-4 py-2">$75/h</td>
-                <td className="border px-4 py-2">$75/h</td>
+                {plans.map(() => (
+                  <td className="border px-4 py-2">$95/hour</td>
+                ))}
+              </tr>
+              <tr>
+                <td className="border px-4 py-2">On-site Rate</td>
+                {plans.map(() => (
+                  <td className="border px-4 py-2">$105/hour</td>
+                ))}
+              </tr>
+              <tr>
+                <td className="border px-4 py-2">Emergency On-site Rate</td>
+                {plans.map(() => (
+                  <td className="border px-4 py-2">$125/hour</td>
+                ))}
               </tr>
               <tr>
                 <td className="border px-4 py-2">Priority Scheduling</td>
                 <td className="border px-4 py-2">No</td>
                 <td className="border px-4 py-2">No</td>
-                <td className="border px-4 py-2">No</td>
                 <td className="border px-4 py-2">Yes</td>
                 <td className="border px-4 py-2">Yes</td>
-              </tr>
-              <tr>
-                <td className="border px-4 py-2">Emergency On-site Rate</td>
-                <td className="border px-4 py-2">$125/hr</td>
-                <td className="border px-4 py-2">$125/hr</td>
-                <td className="border px-4 py-2">$125/hr</td>
-                <td className="border px-4 py-2">$125/hr</td>
-                <td className="border px-4 py-2">$125/hr</td>
-              </tr>
-              <tr>
-                <td className="border px-4 py-2">On-site Rate</td>
-                <td className="border px-4 py-2">$95/hr</td>
-                <td className="border px-4 py-2">$95/hr</td>
-                <td className="border px-4 py-2">$95/hr</td>
-                <td className="border px-4 py-2">$95/hr</td>
-                <td className="border px-4 py-2">$95/hr</td>
               </tr>
               <tr>
                 <td className="border px-4 py-2">Device Monitoring</td>
-                {plans.map((plan, i) => (
-                  <td key={i} className="border px-4 py-2">Included</td>
+                {plans.map(() => (
+                  <td className="border px-4 py-2">Included</td>
                 ))}
               </tr>
               <tr>
@@ -139,25 +120,24 @@ export const PricingOptions = () => {
                 <td className="border px-4 py-2">No</td>
                 <td className="border px-4 py-2">No</td>
                 <td className="border px-4 py-2">No</td>
-                <td className="border px-4 py-2">No</td>
                 <td className="border px-4 py-2">Yes</td>
               </tr>
               <tr>
                 <td className="border px-4 py-2">Backup & Disaster Recovery</td>
-                {plans.map((plan, i) => (
-                  <td key={i} className="border px-4 py-2">Optional</td>
+                {plans.map(() => (
+                  <td className="border px-4 py-2">Optional</td>
                 ))}
               </tr>
               <tr>
                 <td className="border px-4 py-2">Managed Antivirus & Security</td>
-                {plans.map((plan, i) => (
-                  <td key={i} className="border px-4 py-2">Optional</td>
+                {plans.map(() => (
+                  <td className="border px-4 py-2">Optional</td>
                 ))}
               </tr>
               <tr>
                 <td className="border px-4 py-2">Camera / Surveillance Monitoring</td>
-                {plans.map((plan, i) => (
-                  <td key={i} className="border px-4 py-2">Custom Quote</td>
+                {plans.map(() => (
+                  <td className="border px-4 py-2">Custom Quote</td>
                 ))}
               </tr>
             </tbody>
