@@ -23,7 +23,7 @@ export const PricingOptions = () => {
     {
       name: "Premium",
       price: "$1,250/mo",
-      bestFor: "VIP support with same-day response",
+      bestFor: "VIP support",
     },
   ];
 
@@ -124,18 +124,26 @@ export const PricingOptions = () => {
               </tr>
               <tr>
                 <td className="border px-4 py-2">Backup & Disaster Recovery</td>
-                {plans.map(() => (
-                  <td className="border px-4 py-2">Optional</td>
-                ))}
+                <td className="border px-4 py-2">Optional</td>
+                <td className="border px-4 py-2">Optional</td>
+                <td className="border px-4 py-2">Optional</td>
+                <td className="border px-4 py-2">Yes</td>
               </tr>
               <tr>
                 <td className="border px-4 py-2">Managed Antivirus & Security</td>
-                {plans.map(() => (
-                  <td className="border px-4 py-2">Optional</td>
-                ))}
+                <td className="border px-4 py-2">Optional</td>
+                <td className="border px-4 py-2">Optional</td>
+                <td className="border px-4 py-2">Yes</td>
+                <td className="border px-4 py-2">Yes</td>
               </tr>
               <tr>
                 <td className="border px-4 py-2">Camera / Surveillance Monitoring</td>
+                {plans.map(() => (
+                  <td className="border px-4 py-2">Custom Quote</td>
+                ))}
+              </tr>
+              <tr>
+                <td className="border px-4 py-2">VoIP Phone Installation</td>
                 {plans.map(() => (
                   <td className="border px-4 py-2">Custom Quote</td>
                 ))}
