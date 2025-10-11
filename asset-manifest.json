@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.1edd4890.css",
-    "main.js": "/static/js/main.ce837477.js",
+    "main.js": "/static/js/main.ff07f76d.js",
     "static/media/GT.png": "/static/media/GT.0602c140ed06ca6451a8.png",
     "static/media/voipphone.avif": "/static/media/voipphone.35efef876e2b65877840.avif",
     "static/media/whoweworkwith.avif": "/static/media/whoweworkwith.38be94558b61b22cfaa2.avif",
@@ -11,10 +11,10 @@
     "static/media/supportImg.avif": "/static/media/supportImg.5ff34e2aab3c798d8028.avif",
     "index.html": "/index.html",
     "main.1edd4890.css.map": "/static/css/main.1edd4890.css.map",
-    "main.ce837477.js.map": "/static/js/main.ce837477.js.map"
+    "main.ff07f76d.js.map": "/static/js/main.ff07f76d.js.map"
   },
   "entrypoints": [
     "static/css/main.1edd4890.css",
-    "static/js/main.ce837477.js"
+    "static/js/main.ff07f76d.js"
   ]
 }
