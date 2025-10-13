@@ -8,22 +8,26 @@ export const PricingOptions = () => {
     {
       name: "Starter",
       price: "$500/mo",
-      bestFor: "Small setups, 1–3 devices",
+      bestFor: "Basic IT support needs.",
+      deviceMaximum: "Up to 10 devices",
     },
     {
       name: "Basic",
       price: "$750/mo",
-      bestFor: "Businesses needing guaranteed on-site support",
+      bestFor: "Everything in Starter, 1 included hour on-site.",
+      deviceMaximum: "Up to 20 devices",
     },
     {
       name: "Pro",
-      price: "$1,050/mo",
-      bestFor: "Businesses requiring priority response",
+      price: "$1,000/mo",
+      bestFor: "Everything in Basic, 2 included hours on-site, priority scheduling, managed antivirus.",
+      deviceMaximum: "Up to 35 devices",
     },
     {
       name: "Premium",
-      price: "$1,250/mo",
-      bestFor: "VIP support",
+      price: "$1,500/mo",
+      bestFor: "Everything in Pro, 3 included hours on-site, new device setup & break-fix discounts, backup & disaster recovery.",
+      deviceMaximum: "Up to 50 devices",
     },
   ];
 
@@ -31,7 +35,8 @@ export const PricingOptions = () => {
     <div className="border rounded-lg p-6 shadow hover:shadow-lg transition flex flex-col h-full w-full max-w-sm">
       <h3 className="text-xl font-semibold mb-2 text-green-700">{plan.name}</h3>
       <p className="text-3xl font-bold mb-4">{plan.price}</p>
-      <p className="text-gray-600 mb-4"><strong>Best For:</strong> {plan.bestFor}</p>
+      <p className="text-gray-600 mb-4"><strong>Includes: </strong>{plan.bestFor}</p>
+      <p className="text-gray-600 mb-4">{plan.deviceMaximum}</p>
       <Link
         to="/contact"
         className="mt-auto bg-green-700 text-white px-6 py-2 rounded hover:bg-green-800 transition self-start"
