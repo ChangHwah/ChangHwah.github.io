@@ -6,28 +6,22 @@ export const PricingOptions = () => {
 
   const plans = [
     {
-      name: "Starter",
-      price: "$500/mo",
-      bestFor: "Basic IT support needs.",
-      deviceMaximum: "Up to 10 devices",
-    },
-    {
       name: "Basic",
-      price: "$750/mo",
-      bestFor: "Everything in Starter, 1 included hour on-site.",
-      deviceMaximum: "Up to 20 devices",
+      price: "$100/user",
+      Includes: "Device monitoring, 1 included hour on-site.",
+      BestFor: "Startups & Budget-Focused Compliance",
     },
     {
       name: "Pro",
-      price: "$1,000/mo",
-      bestFor: "Everything in Basic, 2 included hours on-site, priority scheduling, managed antivirus.",
-      deviceMaximum: "Up to 35 devices",
+      price: "$125/user",
+      Includes: "Everything in Basic, 2 included hours on-site, managed antivirus included.",
+      BestFor: "Standard Business Operations & Risk Mitigation.",
     },
     {
       name: "Premium",
-      price: "$1,500/mo",
-      bestFor: "Everything in Pro, 3 included hours on-site, new device setup & break-fix discounts, backup & disaster recovery.",
-      deviceMaximum: "Up to 50 devices",
+      price: "$150/user",
+      Includes: "Everything in Pro, 3 included hours on-site, priority scheduling, backup & disaster recovery included.",
+      BestFor: "Regulated Industries & High-Value Targets.",
     },
   ];
 
@@ -35,8 +29,8 @@ export const PricingOptions = () => {
     <div className="border rounded-lg p-6 shadow hover:shadow-lg transition flex flex-col h-full w-full max-w-sm">
       <h3 className="text-xl font-semibold mb-2 text-green-700">{plan.name}</h3>
       <p className="text-3xl font-bold mb-4">{plan.price}</p>
-      <p className="text-gray-600 mb-4"><strong>Includes: </strong>{plan.bestFor}</p>
-      <p className="text-gray-600 mb-4">{plan.deviceMaximum}</p>
+      <p className="text-gray-600 mb-4"><strong>Includes: </strong>{plan.Includes}</p>
+      <p className="text-gray-600 mb-4"><strong>Best For: </strong>{plan.BestFor}</p>
       <Link
         to="/contact"
         className="mt-auto bg-green-700 text-white px-6 py-2 rounded hover:bg-green-800 transition self-start"
@@ -51,7 +45,7 @@ export const PricingOptions = () => {
       <h2 className="text-3xl font-bold mb-8 text-center">Our Pricing Plans</h2>
 
       {/* Single row: 4 cards */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 justify-items-center">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 justify-items-center">
         {plans.map((plan) => renderCard(plan))}
       </div>
       {/* Toggle Full Comparison Table */}
@@ -86,7 +80,6 @@ export const PricingOptions = () => {
                 <td className="border px-4 py-2">On-site Hours Included</td>
                 <td className="border px-4 py-2">N/A</td>
                 <td className="border px-4 py-2">1 hour</td>
-                <td className="border px-4 py-2">2 hours</td>
                 <td className="border px-4 py-2">3 hours</td>
               </tr>
               <tr>
@@ -112,7 +105,6 @@ export const PricingOptions = () => {
                 <td className="border px-4 py-2">No</td>
                 <td className="border px-4 py-2">No</td>
                 <td className="border px-4 py-2">Yes</td>
-                <td className="border px-4 py-2">Yes</td>
               </tr>
               <tr>
                 <td className="border px-4 py-2">Device Monitoring</td>
@@ -121,25 +113,16 @@ export const PricingOptions = () => {
                 ))}
               </tr>
               <tr>
-                <td className="border px-4 py-2">New Device Setup / Break-Fix Discounts</td>
-                <td className="border px-4 py-2">No</td>
-                <td className="border px-4 py-2">No</td>
-                <td className="border px-4 py-2">No</td>
-                <td className="border px-4 py-2">Yes</td>
-              </tr>
-              <tr>
                 <td className="border px-4 py-2">Backup & Disaster Recovery</td>
-                <td className="border px-4 py-2">Optional</td>
-                <td className="border px-4 py-2">Optional</td>
-                <td className="border px-4 py-2">Optional</td>
-                <td className="border px-4 py-2">Yes</td>
+                <td className="border px-4 py-2">Add-on</td>
+                <td className="border px-4 py-2">Add-on</td>
+                <td className="border px-4 py-2">Included</td>
               </tr>
               <tr>
                 <td className="border px-4 py-2">Managed Antivirus & Security</td>
-                <td className="border px-4 py-2">Optional</td>
-                <td className="border px-4 py-2">Optional</td>
-                <td className="border px-4 py-2">Yes</td>
-                <td className="border px-4 py-2">Yes</td>
+                <td className="border px-4 py-2">Add-on</td>
+                <td className="border px-4 py-2">Included</td>
+                <td className="border px-4 py-2">Included</td>
               </tr>
               <tr>
                 <td className="border px-4 py-2">Camera / Surveillance Monitoring</td>
